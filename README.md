@@ -1,7 +1,7 @@
-# Git Practice Repository
+# Horner calculator
 
-I Hope I make it one day!
+A Program that divides a polynomial
 
 ## Subheader
 
-This is a Subheader
+It is not functioning yet...
