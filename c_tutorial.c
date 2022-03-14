@@ -33,7 +33,7 @@ int main(){
     int remainderIsZero = 0;
     int newCoefficient[polynomialDegree];
     newCoefficient[0] = coefficient[0];
-    newCoefficient[1] = (coefficient[0]*divisor[0]) + coefficient[0];
+    newCoefficient[1] = (coefficient[0]*divisor[0]) + coefficient[1];
     int z = 0;
     while(remainderIsZero == 0){ 
         for(z = 0; z < sizeof(divisor)/sizeof(divisor[0]);){
