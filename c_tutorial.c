@@ -13,14 +13,16 @@
 
 // };
 
-int getPolynomialDegree() {
+int getPolynomialDegree()
+{
   int polynomialDegree;
   printf("Insert degree of polynomial: ");
   scanf("%d", &polynomialDegree);
   return polynomialDegree;
 };
 
-int getCoefficients() {
+int getCoefficients()
+{
   int coefficient;
   printf(
       "Insert coefficients in the order of decreasing polynomial exponents: ");
@@ -28,34 +30,44 @@ int getCoefficients() {
   return coefficient;
 };
 
-int getStableTerm() {
+int getStableTerm()
+{
   int stableTerm;
   printf("Insert stable term: ");
   scanf("%d", &stableTerm);
   return stableTerm;
 };
 
-
-int main() {
+int main()
+{
 
   int polynomialDegree = getPolynomialDegree();
   int coefficients[polynomialDegree];
-  for (int i = 0; i < polynomialDegree; i++) {
+  for (int i = 0; i < polynomialDegree; i++)
+  {
     coefficients[i] = getCoefficients();
   };
 
   int stableTerm = getStableTerm();
   int divisor[stableTerm];
   int divisorCounter = 1;
-  for (int i = 0; i <= stableTerm*2; i+=2) {
-     if (stableTerm % divisorCounter == 0) {
-         divisor[i] = divisorCounter;
-         divisor[i+1] = divisorCounter*-1;
-         printf("%d\n", divisor[i]);
-         printf("%d\n", divisor[i+1]);
-     };
-     divisorCounter++;
-   };
+  for (int i = 0; i <= stableTerm * 2; i += 2)
+  {
+    if (stableTerm % divisorCounter == 0) {
+      divisor[i] = divisorCounter;
+      divisor[i + 1] = divisorCounter * -1;
+      printf("%d\n", divisor[i]);
+      printf("%d\n", divisor[i + 1]);
+    };
+    divisorCounter++;
+  };
+  int newCoefficients[polynomialDegree];
+  newCoefficients[0] = coefficients[0];
+  for (int i = 1; i <= polynomialDegree; i++)
+  {
+      newCoefficients[i] = (newCoefficients[i-1]*divisor[0]) + coefficients[i];
+      printf("%d\n", newCoefficients[i]);
+  };
 
   //     int remainderIsZero = 0;
   //     int newCoefficient[polynomialDegree];
