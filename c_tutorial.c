@@ -47,10 +47,12 @@ int main() {
   int stableTerm = getStableTerm();
   int divisor[stableTerm];
   int divisorCounter = 1;
-  for (int i = 0; i <= stableTerm; i=+2) {
+  for (int i = 0; i <= stableTerm*2; i+=2) {
      if (stableTerm % divisorCounter == 0) {
          divisor[i] = divisorCounter;
-         printf("%d", divisor[i]);
+         divisor[i+1] = divisorCounter*-1;
+         printf("%d\n", divisor[i]);
+         printf("%d\n", divisor[i+1]);
      };
      divisorCounter++;
    };
