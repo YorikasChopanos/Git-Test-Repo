@@ -61,6 +61,7 @@ int main() {
            i < (sizeof(newCoefficients) / sizeof(newCoefficients[0])); i++) {
         printf("%d ", newCoefficients[i]);
       };
+      printf("\n");
       break;
     };
   };
