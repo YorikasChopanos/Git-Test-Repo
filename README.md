@@ -1,7 +1,7 @@
 # Horner calculator
 
-A Program that divides a polynomial
+A Program that solves a polynomial by divising it with a number.
 
 ## Subheader
 
-It is not functioning yet...
+Version 1 is out! It is finally functionning!
