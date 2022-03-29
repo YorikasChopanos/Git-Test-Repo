@@ -38,8 +38,6 @@ int main() {
     if (stableTerm % divisorCounter == 0) {
       divisor[i] = divisorCounter;
       divisor[i + 1] = divisorCounter * -1;
-      // printf("%d\n", divisor[i]);
-      // printf("%d\n", divisor[i + 1]);
     };
     divisorCounter++;
   };
