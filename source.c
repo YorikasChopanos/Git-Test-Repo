@@ -42,7 +42,6 @@ int main() {
     divisorCounter++;
   };
   int newCoefficients[polynomialDegree];
-  int newDivisor;
   int remainder;
   newCoefficients[0] = coefficients[0];
   for (divisorCounter = 0;
@@ -61,6 +60,8 @@ int main() {
       };
       printf("\n");
       break;
+    } else {
+      printf("Couldn't do horner in this equation.");
     };
   };
   return 0;
