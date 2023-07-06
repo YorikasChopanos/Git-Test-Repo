@@ -1,6 +1,6 @@
 # Horner calculator
 
-A Program that solves a polynomial by divising it with a number.
+A Program that solves a polynomial by dividing it with a number.
 
 ## Subheader
 
